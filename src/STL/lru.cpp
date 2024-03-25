@@ -16,7 +16,7 @@ class LRUCache{
       auto it = umap.find(key);
       if(it==umap.end())
         return -1;
-      auto temp = *it->second;
+      auto temp = *(it->second);
       LRUlist.erase(it->second);
       umap.erase(it);
       LRUlist.push_front(temp);
